@@ -1,6 +1,8 @@
 bin/
 obj/
 out/
+allure-results/
+allure-report/
 
 *.user
 *.suo
