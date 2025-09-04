@@ -31,27 +31,27 @@ namespace AutomationAssessment.Tests.Pages
         private readonly By _createAccountBtn = By.CssSelector("form button[type='submit']");
         private readonly By _accountCreatedMsg = By.CssSelector("h2[data-qa='account-created']");
 
-        public bool IsMrTitleVisible() => _driver.FindElement(_mrTitleRadioBtn).Displayed;
-        public bool IsMrsTitleVisible() => _driver.FindElement(_mrsTitleRadioBtn).Displayed;
-        public bool IsNameFieldVisible() => _driver.FindElement(_nameField).Displayed;
-        public bool IsEmailFieldVisible() => _driver.FindElement(_emailField).Displayed;
-        public bool IsPasswordFieldVisible() => _driver.FindElement(_passwordField).Displayed;
-        public bool IsDayOfBirthVisible() => _driver.FindElement(_dayOfBirth).Displayed;
-        public bool IsMonthOfBirthVisible() => _driver.FindElement(_monthOfBirth).Displayed;
-        public bool IsYearOfBirthVisible() => _driver.FindElement(_yearOfBirth).Displayed;
-        public bool IsNewsletterCheckboxVisible() => _driver.FindElement(_newsletterCheckbox).Displayed;
-        public bool IsReceiveOffersCheckboxVisible() => _driver.FindElement(_receiveOffersCheckbox).Displayed;
-        public bool IsFirstNameVisible() => _driver.FindElement(_firstNameField).Displayed;
-        public bool IsLastNameVisible() => _driver.FindElement(_lastNameField).Displayed;
-        public bool IsCompanyVisible() => _driver.FindElement(_companyField).Displayed;
-        public bool IsAddress1Visible() => _driver.FindElement(_firstAddressField).Displayed;
-        public bool IsAddress2Visible() => _driver.FindElement(_secondAddressField).Displayed;
-        public bool IsCountryVisible() => _driver.FindElement(_countryDropdown).Displayed;
-        public bool IsStateVisible() => _driver.FindElement(_stateField).Displayed;
-        public bool IsCityVisible() => _driver.FindElement(_cityField).Displayed;
-        public bool IsZipCodeVisible() => _driver.FindElement(_zipCodeField).Displayed;
-        public bool IsMobileNumberVisible() => _driver.FindElement(_mobileNumberField).Displayed;
-        public bool IsCreateAccountBtnVisible() => _driver.FindElement(_createAccountBtn).Displayed;
+        public bool IsMrTitleDisplayed() => _driver.FindElement(_mrTitleRadioBtn).Displayed;
+        public bool IsMrsTitleDisplayed() => _driver.FindElement(_mrsTitleRadioBtn).Displayed;
+        public bool IsNameFieldDisplayed() => _driver.FindElement(_nameField).Displayed;
+        public bool IsEmailFieldDisplayed() => _driver.FindElement(_emailField).Displayed;
+        public bool IsPasswordFieldDisplayed() => _driver.FindElement(_passwordField).Displayed;
+        public bool IsDayOfBirthDisplayed() => _driver.FindElement(_dayOfBirth).Displayed;
+        public bool IsMonthOfBirthDisplayed() => _driver.FindElement(_monthOfBirth).Displayed;
+        public bool IsYearOfBirthDisplayed() => _driver.FindElement(_yearOfBirth).Displayed;
+        public bool IsNewsletterCheckboxDisplayed() => _driver.FindElement(_newsletterCheckbox).Displayed;
+        public bool IsReceiveOffersCheckboxDisplayed() => _driver.FindElement(_receiveOffersCheckbox).Displayed;
+        public bool IsFirstNameDisplayed() => _driver.FindElement(_firstNameField).Displayed;
+        public bool IsLastNameDisplayed() => _driver.FindElement(_lastNameField).Displayed;
+        public bool IsCompanyDisplayed() => _driver.FindElement(_companyField).Displayed;
+        public bool IsAddress1Displayed() => _driver.FindElement(_firstAddressField).Displayed;
+        public bool IsAddress2Displayed() => _driver.FindElement(_secondAddressField).Displayed;
+        public bool IsCountryDisplayed() => _driver.FindElement(_countryDropdown).Displayed;
+        public bool IsStateDisplayed() => _driver.FindElement(_stateField).Displayed;
+        public bool IsCityDisplayed() => _driver.FindElement(_cityField).Displayed;
+        public bool IsZipCodeDisplayed() => _driver.FindElement(_zipCodeField).Displayed;
+        public bool IsMobileNumberDisplayed() => _driver.FindElement(_mobileNumberField).Displayed;
+        public bool IsCreateAccountBtnDisplayed() => _driver.FindElement(_createAccountBtn).Displayed;
 
         public void SelectTitle(string title)
         {

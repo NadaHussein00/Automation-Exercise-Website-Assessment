@@ -10,14 +10,23 @@ namespace AutomationAssessment.Tests.Utils
             {
                 var values = loginLines[i].Split(','); 
                 testCases.Add(new TestCaseData(values[0], values[1]));
+                var testCase = new TestCaseData(values[0], values[1])
+                    .SetName($"Invalid Login Attempts With Email:{values[0]} and Password:{values[1]}");
             }
             return testCases;
         }
 
-        public static string GetUniqueEmail(string baseEmail)
+        public static IEnumerable<TestCaseData> GetSignUpData()
         {
-            long timestamp = DateTime.Now.Ticks;
-            return baseEmail.Replace("@", $"_{timestamp}@");
+            var testCases = new List<TestCaseData>();
+            var signUpLines = File.ReadAllLines("TestData/signUpData.csv"); 
+            for (int i = 1; i < signUpLines.Length; i++) 
+            {
+                var values = signUpLines[i].Split(','); 
+                testCases.Add(new TestCaseData(values[0], values[1]));
+            }
+            return testCases;
         }
+        
     }
 }
