@@ -1,6 +1,6 @@
 namespace AutomationAssessment.Tests.Pages
 {
-    public class LoginPage
+    public class AuthPage
     {
         // your code
     }
