@@ -1,2 +1,2 @@
-Email,Password
-testuser1@example.com,Password12@
+Email,Password,Type
+testuser1@example.com,Password12@,Valid
