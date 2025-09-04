@@ -24,12 +24,19 @@ namespace AutomationAssessment.Tests.Pages
 
         public bool IsLogoDisplayed() => _driver.FindElement(_logoImage).Displayed;
         public bool IsHomeBtnDisplayed() => _driver.FindElement(_homeBtn).Displayed;
+        public bool IsHomeBtnClickable() => _driver.FindElement(_homeBtn).Enabled;
         public string HomeText() => _driver.FindElement(_homeBtn).Text.Trim();
+
         public bool IsCartBtnDisplayed() => _driver.FindElement(_cartBtn).Displayed;
+        public bool IsCartBtnClickable() => _driver.FindElement(_cartBtn).Enabled;
         public string CartText() => _driver.FindElement(_cartBtn).Text.Trim();
+
         public bool IsSignupBtnDisplayed() => _driver.FindElement(_signupBtn).Displayed;
+        public bool IsSignupBtnClickable() => _driver.FindElement(_signupBtn).Enabled;
         public string SignupText() => _driver.FindElement(_signupBtn).Text.Trim();
+        
         public bool IsContactUsBtnDisplayed() => _driver.FindElement(_contactUsBtn).Displayed;
+        public bool IsContactUsBtnClickable() => _driver.FindElement(_contactUsBtn).Enabled;
         public string ContactUsText() => _driver.FindElement(_contactUsBtn).Text.Trim();
     
     }

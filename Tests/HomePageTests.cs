@@ -41,6 +41,17 @@ namespace AutomationAssessment.Tests.Tests
 
         [Test]
         [Category("UI")]
+        public void Home_Button_Is_Clickable()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsHomeBtnClickable(), Is.True,"Home button isn't clickable");
+            
+        }
+
+        [Test]
+        [Category("UI")]
         public void Home_Button_Text_Is_Displayed()
         {
             var homePage = new HomePage(driver);
@@ -72,6 +83,17 @@ namespace AutomationAssessment.Tests.Tests
             
         }
 
+        [Test]
+        [Category("UI")]
+        public void Cart_Button_Is_Clickable()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsCartBtnClickable(), Is.True,"cart button isn't clickable");
+            
+        }
+
         
         [Test]
         [Category("UI")]
@@ -81,6 +103,17 @@ namespace AutomationAssessment.Tests.Tests
 
             homePage.GoToHomePage();
             Assert.That(homePage.IsSignupBtnDisplayed(), Is.True,"Signup button isn't displayed");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Signup_Button_Is_Clickable()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsSignupBtnClickable(), Is.True,"Signup/Login button isn't clickable");
             
         }
 
@@ -104,6 +137,17 @@ namespace AutomationAssessment.Tests.Tests
 
             homePage.GoToHomePage();
             Assert.That(homePage.IsContactUsBtnDisplayed(), Is.True,"Contact us button isn't displayed");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Contact_Us_Button_Is_Clickable()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsContactUsBtnClickable(), Is.True,"Contact us button isn't clickable");
             
         }
 
