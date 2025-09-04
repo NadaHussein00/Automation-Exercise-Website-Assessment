@@ -21,6 +21,7 @@ namespace AutomationAssessment.Tests.Pages
         private readonly By _cartBtn = By.CssSelector("#header ul li:nth-child(3) a");
         private readonly By _signupBtn = By.CssSelector("#header ul li:nth-child(4) a");
         private readonly By _contactUsBtn = By.CssSelector("#header ul li:last-child a");
+        private readonly By _womenCategoryBtn = By.CssSelector("#accordian div div h4 a");
 
         public bool IsLogoDisplayed() => _driver.FindElement(_logoImage).Displayed;
         public bool IsHomeBtnDisplayed() => _driver.FindElement(_homeBtn).Displayed;
@@ -38,6 +39,10 @@ namespace AutomationAssessment.Tests.Pages
         public bool IsContactUsBtnDisplayed() => _driver.FindElement(_contactUsBtn).Displayed;
         public bool IsContactUsBtnClickable() => _driver.FindElement(_contactUsBtn).Enabled;
         public string ContactUsText() => _driver.FindElement(_contactUsBtn).Text.Trim();
+
+        public bool IsWomenCategoryBtnDisplayed() => _driver.FindElement(_womenCategoryBtn).Displayed;
+        public bool IsWomenCategoryBtnClickable() => _driver.FindElement(_womenCategoryBtn).Enabled;
+        public string WomenCategoryText() => _driver.FindElement(_womenCategoryBtn).Text.Trim();
     
     }
 }

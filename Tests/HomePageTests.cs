@@ -161,5 +161,38 @@ namespace AutomationAssessment.Tests.Tests
             Assert.That(homePage.ContactUsText(), Is.EqualTo("Contact us"),"Contact us text isn't displayed");
             
         }
+
+        [Test]
+        [Category("UI")]
+        public void Women_Category_Button_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsWomenCategoryBtnDisplayed(), Is.True,"Women category button in category list isn't displayed");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Women_Category_Button_Is_Clickable()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsWomenCategoryBtnClickable(), Is.True,"Women category button in category list isn't clickable");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Women_Category_Button_Text_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.WomenCategoryText(), Is.EqualTo("WOMEN"),"Women category text in category list isn't displayed");
+            
+        }
     }
 }
