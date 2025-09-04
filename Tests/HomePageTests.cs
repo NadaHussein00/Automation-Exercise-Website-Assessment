@@ -50,6 +50,28 @@ namespace AutomationAssessment.Tests.Tests
             
         }
 
+        [Test]
+        [Category("UI")]
+        public void Cart_Button_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsCartBtnDisplayed(), Is.True,"Cart button isn't displayed");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Cart_Button_Text_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.CartText(), Is.EqualTo("Cart"),"Cart text isn't displayed");
+            
+        }
+
         
         [Test]
         [Category("UI")]
