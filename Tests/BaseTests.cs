@@ -2,6 +2,7 @@ using AutomationAssessment.Tests.Drivers;
 
 namespace AutomationAssessment.Tests.Tests
 {
+    [AllureNUnit]  
     public class BaseTests
     {
         protected IWebDriver driver;

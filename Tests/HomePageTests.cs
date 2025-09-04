@@ -2,6 +2,7 @@ using AutomationAssessment.Tests.Pages;
 
 namespace AutomationAssessment.Tests.Tests
 {
+    [AllureEpic("Homepage")]
     public class HomePageTests : BaseTests
     {
         [Test]

@@ -89,7 +89,7 @@ namespace AutomationAssessment.Tests.Pages
                 return _wait.Until(ExpectedConditions.ElementIsVisible(_invalidLoginAttemptErrorMsg)).Text.Trim();
             }
             catch(WebDriverTimeoutException){
-                return null;
+                return string.Empty;
             }
         }
 

@@ -3,6 +3,7 @@ using AutomationAssessment.Tests.Pages;
 
 namespace AutomationAssessment.Tests.Tests
 {
+    [AllureEpic("Login")]
     public class LoginFormTests : BaseTests
     {
         [Test]
