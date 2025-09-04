@@ -94,5 +94,28 @@ namespace AutomationAssessment.Tests.Tests
             Assert.That(homePage.SignupText(), Is.EqualTo("Signup / Login"),"Signup / Login text isn't displayed");
             
         }
+
+        
+        [Test]
+        [Category("UI")]
+        public void Contact_Us_Button_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsContactUsBtnDisplayed(), Is.True,"Contact us button isn't displayed");
+            
+        }
+
+        [Test]
+        [Category("UI")]
+        public void Contact_Us_Button_Text_Is_Displayed()
+        {
+            var homePage = new HomePage(driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.ContactUsText(), Is.EqualTo("Contact us"),"Contact us text isn't displayed");
+            
+        }
     }
 }
