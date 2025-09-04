@@ -15,7 +15,7 @@ namespace AutomationAssessment.Tests.Pages
             _driver.Navigate().GoToUrl(HomePageUrl);
         }
 
-        // Example element
+
         private readonly By _logoImage = By.CssSelector("img[alt='Website for automation practice']");
         private readonly By _homeBtn = By.CssSelector("#header ul li:first-child a");  
         private readonly By _cartBtn = By.CssSelector("#header ul li:nth-child(3) a");
