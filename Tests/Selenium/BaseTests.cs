@@ -12,8 +12,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
         [SetUp]
         public void SetUp()
         {
-            driverSetup = new DriverSetup();       
-            _driver = driverSetup.InitDriver();     
+            driverSetup = new DriverSetup();
+            _driver = driverSetup.InitDriver();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);   
         }
 
         [TearDown]
