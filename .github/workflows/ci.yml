@@ -19,10 +19,11 @@ jobs:
         with:
           dotnet-version: 9.0.100
 
-      - name: Setup Allure
-        uses: simple-elf/allure-report-action@master
-        with:
-          allure-version: 2.29.0
+      - name: Install Allure CLI
+        run: |
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
+          scoop install allure
 
       - name: Restore dependencies
         run: dotnet restore
