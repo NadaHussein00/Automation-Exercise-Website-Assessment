@@ -27,6 +27,7 @@ jobs:
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           irm get.scoop.sh | iex
           scoop install allure
+          echo "C:\Users\runneradmin\scoop\shims" | Out-File -Append -FilePath $env:GITHUB_PATH
 
       - name: Run tests
         run: dotnet test --logger:"console;verbosity=detailed" --results-directory allure-results
