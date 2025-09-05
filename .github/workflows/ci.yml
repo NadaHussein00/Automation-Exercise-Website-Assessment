@@ -19,10 +19,10 @@ jobs:
         with:
           dotnet-version: 9.0.100
 
-      - name: Install Allure CLI
-        run: |
-          choco install allure.commandline -y
-          allure --version
+      - name: Setup Allure
+        uses: simple-elf/allure-report-action@master
+        with:
+          allure-version: 2.29.0
 
       - name: Restore dependencies
         run: dotnet restore
