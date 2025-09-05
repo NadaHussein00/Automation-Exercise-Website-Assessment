@@ -17,7 +17,7 @@ namespace AutomationAssessment.Tests.Pages
 
 
         private readonly By _logoImage = By.CssSelector("img[alt='Website for automation practice']");
-        private readonly By _homeBtn = By.CssSelector("a[href='/']");  
+        private readonly By _homeBtn = By.CssSelector("#header ul li:first-child a");  
         private readonly By _cartBtn = By.CssSelector("a[href='/view_cart']");
         private readonly By _signupBtn = By.CssSelector("a[href='/login']");
         private readonly By _contactUsBtn = By.CssSelector("a[href='/contact_us']");
