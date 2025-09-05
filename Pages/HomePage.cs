@@ -17,11 +17,11 @@ namespace AutomationAssessment.Tests.Pages
 
 
         private readonly By _logoImage = By.CssSelector("img[alt='Website for automation practice']");
-        private readonly By _homeBtn = By.CssSelector("#header ul li:first-child a");  
-        private readonly By _cartBtn = By.CssSelector("#header ul li:nth-child(3) a");
-        private readonly By _signupBtn = By.CssSelector("#header ul li:nth-child(4) a");
-        private readonly By _contactUsBtn = By.CssSelector("#header ul li:last-child a");
-        private readonly By _womenCategoryBtn = By.CssSelector("#accordian div div h4 a");
+        private readonly By _homeBtn = By.CssSelector("a=[href='/']");  
+        private readonly By _cartBtn = By.CssSelector("a=[href='/view_cart']");
+        private readonly By _signupBtn = By.CssSelector("a=[href='/login']");
+        private readonly By _contactUsBtn = By.CssSelector("a=[href='/contact_us']");
+        private readonly By _womenCategoryBtn = By.CssSelector("a=[href='#Women']");
 
         public bool IsLogoDisplayed() => _driver.FindElement(_logoImage).Displayed;
         public bool IsHomeBtnDisplayed() => _driver.FindElement(_homeBtn).Displayed;

@@ -19,6 +19,9 @@ jobs:
         with:
           dotnet-version: 9.0.100
 
+      - name: Restore dependencies
+        run: dotnet restore
+
       - name: Install Allure CLI
         run: |
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -28,12 +31,6 @@ jobs:
       - name: Run tests
         run: dotnet test --logger:"console;verbosity=detailed" --results-directory allure-results
         continue-on-error: true
-
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Run tests
-        run: dotnet test --logger:"console;verbosity=detailed" --results-directory allure-results
 
       - name: Generate Allure Report
         run: allure generate allure-results --clean -o allure-report
