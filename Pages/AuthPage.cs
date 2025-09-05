@@ -33,7 +33,7 @@ namespace AutomationAssessment.Tests.Pages
         public SignUpInfoPage SignUpWithBasicInfo(string name, string email)
         {
             FillNameSignUpField(name);
-            FillEmailSignUpField(SharedMethods.GetUniqueEmail(email));
+            FillEmailSignUpField(email);
             ClickSignupBtn();
             return ContinueToAccountInfoPage();
         }
