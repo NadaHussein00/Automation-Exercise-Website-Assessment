@@ -14,3 +14,5 @@ global using Allure.NUnit.Attributes;
 
 global using RestSharp;
 global using System.Text.Json;
+global using System.Net;
+global using System.Threading.Tasks;

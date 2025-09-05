@@ -8,9 +8,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     {
         [Test]
         [Category("Login"), Category("Navigation"), Category("Positive")]
-        public void LoginWithValidCredentils()
+        public void Login_With_Valid_Credentils()
         {
-            var authPage = new AuthPage(driver);
+            var authPage = new AuthPage(Driver);
             authPage.GoToAuthPage();
 
             string email = "nada@example.com";
@@ -28,9 +28,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
         [Test]
         [Category("Login"), Category("Error Handeling"), Category("Negative")]
         [TestCaseSource(typeof(CsvReader), nameof(CsvReader.GetLoginData))]
-        public void LoginWithInvalidCredentials(string email, string password)
+        public void Login_With_Invalid_Credentials(string email, string password)
         {
-            var authPage = new AuthPage(driver);
+            var authPage = new AuthPage(Driver);
             authPage.GoToAuthPage();
 
             if (authPage.IsLogoutBtnDisplayed())

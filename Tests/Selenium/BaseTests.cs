@@ -5,21 +5,22 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     [AllureNUnit]  
     public class BaseTests
     {
-        protected IWebDriver driver;
+        private IWebDriver _driver;
         private DriverSetup driverSetup;
+        protected IWebDriver Driver => _driver;
 
         [SetUp]
         public void SetUp()
         {
             driverSetup = new DriverSetup();       
-            driver = driverSetup.InitDriver();     
+            _driver = driverSetup.InitDriver();     
         }
 
         [TearDown]
         public void TearDown()
         {
             driverSetup.QuitDriver(); 
-            driver.Dispose();
+            _driver.Dispose();
         }
     }
 }

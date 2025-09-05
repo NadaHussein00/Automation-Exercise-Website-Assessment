@@ -8,25 +8,24 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     {
         [Test]
         [Category("SignUp"), Category("Navigation")]
-        public void NavigationToSignUpPage()
+        public void Navigation_To_SignUp_Page()
         {
-            var authPage = new AuthPage(driver);
+            var authPage = new AuthPage(Driver);
             authPage.GoToAuthPage();
 
             string name = "TestUser";
             string email = SharedMethods.GetUniqueEmail("testuser@example.com");
             var signUpInfoPage = authPage.SignUpWithBasicInfo(name, email);
 
-            // var signUpInfoPage = authPage.ContinueToAccountInfoPage();
             Assert.That(authPage.IsUserNavigatedToSignUpPage(), Is.True,"User isn't navigated to signup info page");
         }
 
 
         [Test]
         [Category("SignUp"), Category("UI")]
-        public void SignUpFormElementsDisplayed()
+        public void SignUp_Form_Elements_Displayed()
         {
-            var authPage = new AuthPage(driver);
+            var authPage = new AuthPage(Driver);
             authPage.GoToAuthPage();
 
             string name = "TestUser";
@@ -34,7 +33,6 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
             var signUpInfoPage = authPage.SignUpWithBasicInfo(name, email);
 
-            // var accountInfoPage = authPage.ContinueToAccountInfoPage();
 
           Assert.Multiple(() =>
             {
@@ -65,16 +63,15 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
           [Test]
         [Category("SignUp"), Category("Positive")]
-        public void SuccessfulAccountCreationTest()
+        public void Successful_Account_Creation()
         {
-            var authPage = new AuthPage(driver);
+            var authPage = new AuthPage(Driver);
             authPage.GoToAuthPage();
 
             string name = "TestUser";
             string email = SharedMethods.GetUniqueEmail("testuser@example.com");
             var signUpInfoPage = authPage.SignUpWithBasicInfo(name, email);
 
-            // var signUpInfoPage = authPage.ContinueToAccountInfoPage();
 
             signUpInfoPage.SelectTitle("Mr");
             signUpInfoPage.FillNameField("TestUser");
@@ -86,7 +83,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             signUpInfoPage.FillLastNameField("User");
             signUpInfoPage.FillCompanyField("Company");
             signUpInfoPage.FillAddress1Field("street, state, city");
-            signUpInfoPage.SelectCountry("United States");
+            signUpInfoPage.SelectCountry("India");
             signUpInfoPage.FillStateField("state");
             signUpInfoPage.FillCityField("city");
             signUpInfoPage.FillZipCodeField("90001");
