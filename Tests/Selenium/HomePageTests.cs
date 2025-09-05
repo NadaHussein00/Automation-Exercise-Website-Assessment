@@ -1,6 +1,6 @@
 using AutomationAssessment.Tests.Pages;
 
-namespace AutomationAssessment.Tests.Tests
+namespace AutomationAssessment.Tests.Tests.Selenium
 {
     [AllureEpic("Homepage")]
     public class HomePageTests : BaseTests

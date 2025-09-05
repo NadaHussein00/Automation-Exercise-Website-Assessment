@@ -11,3 +11,6 @@ global using System.Collections.Generic;
 
 global using Allure.NUnit;
 global using Allure.NUnit.Attributes;
+
+global using RestSharp;
+global using System.Text.Json;

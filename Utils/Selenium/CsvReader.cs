@@ -1,4 +1,4 @@
-namespace AutomationAssessment.Tests.Utils
+namespace AutomationAssessment.Tests.Utils.Selenium
 {
     public class CsvReader
     {

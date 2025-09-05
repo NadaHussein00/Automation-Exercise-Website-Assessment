@@ -1,6 +1,6 @@
 using AutomationAssessment.Tests.Drivers;
 
-namespace AutomationAssessment.Tests.Tests
+namespace AutomationAssessment.Tests.Tests.Selenium
 {
     [AllureNUnit]  
     public class BaseTests

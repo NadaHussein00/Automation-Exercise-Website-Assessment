@@ -1,7 +1,7 @@
-using AutomationAssessment.Tests.Utils;
+using AutomationAssessment.Tests.Utils.Selenium;
 using AutomationAssessment.Tests.Pages;
 
-namespace AutomationAssessment.Tests.Tests
+namespace AutomationAssessment.Tests.Tests.Selenium
 {
     [AllureEpic("Login")]
     public class LoginFormTests : BaseTests
