@@ -3,10 +3,14 @@ using AutomationAssessment.Tests.Utils.Selenium;
 
 namespace AutomationAssessment.Tests.Tests.API
 {
+    [AllureEpic("API Tests")]
+    [AllureSuite("API Account Creation Tests")]
     public class CreateAccountTests : ApiTestSetup
     {
         [Test]
-        [Category("API"), Category("CreateAccount"), Category("Positive")]
+        [Category("API"), Category("CreateAccount"), Category("Valid")]
+        [AllureSubSuite("Valid Account Creation Tests")]
+        [AllureStory("Account Creation With Valid Information")]
         public async Task CreateAccount_WithValidData_ShouldReturn201()
         {
             string uniqueEmail = SharedMethods.GetUniqueEmail("testuser@example.com");

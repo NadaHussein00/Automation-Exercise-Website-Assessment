@@ -3,11 +3,14 @@ using AutomationAssessment.Tests.Pages;
 
 namespace AutomationAssessment.Tests.Tests.Selenium
 {
-    [AllureEpic("SignUp")]
+    [AllureEpic("Selenium")]
+    [AllureSuite("Signup Tests")]
     public class SignUpFormTests : BaseTests
     {
         [Test]
-        [Category("SignUp"), Category("Navigation")]
+        [Category("Selenium"), Category("SignUp"), Category("Navigation"), Category("Valid")]
+        [AllureSubSuite("Navigation Tests")]
+        [AllureStory("Correct Navigation to Signup Page")]
         public void Navigation_To_SignUp_Page()
         {
             var authPage = new AuthPage(Driver);
@@ -22,7 +25,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
 
         [Test]
-        [Category("SignUp"), Category("UI")]
+        [Category("Selenium"), Category("SignUp"), Category("UI"), Category("Valid")]
+        [AllureSubSuite("UI Tests")]
+        [AllureStory("Elements of Signup Page are Displayed")]
         public void SignUp_Form_Elements_Displayed()
         {
             var authPage = new AuthPage(Driver);
@@ -62,7 +67,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
           }
 
           [Test]
-        [Category("SignUp"), Category("Positive")]
+          [Category("Selenium"), Category("SignUp"), Category("AccoutCreation"), Category("Valid")]
+          [AllureSubSuite("Valid Account Creation Tests")]
+          [AllureStory("Account Creation With Valid Information")]
         public void Successful_Account_Creation()
         {
             var authPage = new AuthPage(Driver);

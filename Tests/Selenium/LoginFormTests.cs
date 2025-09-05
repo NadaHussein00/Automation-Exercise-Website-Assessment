@@ -3,11 +3,14 @@ using AutomationAssessment.Tests.Pages;
 
 namespace AutomationAssessment.Tests.Tests.Selenium
 {
-    [AllureEpic("Login")]
+    [AllureEpic("Selenium Tests")]
+    [AllureSuite("Login Tests")]
     public class LoginFormTests : BaseTests
     {
         [Test]
-        [Category("Login"), Category("Navigation"), Category("Positive")]
+        [Category("Selenium"), Category("Login"), Category("Navigation"), Category("Valid")]
+        [AllureSubSuite("Valid Login Tests")]
+        [AllureStory("Login With Valid Credentials")]
         public void Login_With_Valid_Credentils()
         {
             var authPage = new AuthPage(Driver);
@@ -20,14 +23,16 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             authPage.ClickLoginBtn();
 
             Assert.That(authPage.IsLogoutBtnDisplayed(), Is.True, "Logout button isn't displayed");
-            Assert.That(authPage.LogoutBtnText, Does.Contain("Logout"),"Logout text isn't displayed");
+            Assert.That(authPage.LogoutBtnText, Does.Contain("Logout"), "Logout text isn't displayed");
 
             authPage.ClickLogoutBtn();
         }
 
         [Test]
-        [Category("Login"), Category("Error Handeling"), Category("Negative")]
+        [Category("Selenium"), Category("Login"), Category("Error Handeling"), Category("Invalid")]
         [TestCaseSource(typeof(CsvReader), nameof(CsvReader.GetLoginData))]
+        [AllureSubSuite("Invalid Login Tests")]
+        [AllureStory("Login With Invalid Credentials")]
         public void Login_With_Invalid_Credentials(string email, string password)
         {
             var authPage = new AuthPage(Driver);
@@ -36,7 +41,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             if (authPage.IsLogoutBtnDisplayed())
             {
                 authPage.ClickLogoutBtn();
-                authPage.GoToAuthPage(); 
+                authPage.GoToAuthPage();
             }
 
             authPage.FillEmailLoginField(email);
