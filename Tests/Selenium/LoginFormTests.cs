@@ -22,8 +22,12 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             authPage.FillPasswordLoginField(password);
             authPage.ClickLoginBtn();
 
-            Assert.That(authPage.IsLogoutBtnDisplayed(), Is.True, "Logout button isn't displayed");
-            Assert.That(authPage.LogoutBtnText, Does.Contain("Logout"), "Logout text isn't displayed");
+            Assert.Multiple(() =>
+            {
+                Assert.That(authPage.IsLogoutBtnDisplayed(), Is.True, "Logout button isn't displayed");
+                Assert.That(authPage.LogoutBtnText, Does.Contain("Logout"), "Logout text isn't displayed");
+            });
+            
 
             authPage.ClickLogoutBtn();
         }

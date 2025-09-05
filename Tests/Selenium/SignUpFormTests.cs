@@ -97,8 +97,12 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             signUpInfoPage.FillMobileNumberField("0123456789");
             signUpInfoPage.ClickCreateAccountBtn();
 
-            Assert.That(signUpInfoPage.IsAccountCreated(), Is.True, "Account was not created successfully");
-            Assert.That(signUpInfoPage.AccountCreatedText, Does.Contain("ACCOUNT CREATED!"),"Success message isn't (account created!)");
+            Assert.Multiple(() =>
+            {
+              Assert.That(signUpInfoPage.IsAccountCreated(), Is.True, "Account was not created successfully");
+              Assert.That(signUpInfoPage.AccountCreatedText, Does.Contain("ACCOUNT CREATED!"),"Success message isn't (account created!)");
+            });
+            
         }
     }
     }

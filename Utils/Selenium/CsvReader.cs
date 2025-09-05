@@ -15,18 +15,6 @@ namespace AutomationAssessment.Tests.Utils.Selenium
             }
             return testCases;
         }
-
-        public static IEnumerable<TestCaseData> GetSignUpData()
-        {
-            var testCases = new List<TestCaseData>();
-            var signUpLines = File.ReadAllLines("TestData/signUpData.csv"); 
-            for (int i = 1; i < signUpLines.Length; i++) 
-            {
-                var values = signUpLines[i].Split(','); 
-                testCases.Add(new TestCaseData(values[0], values[1]));
-            }
-            return testCases;
-        }
         
     }
 }
