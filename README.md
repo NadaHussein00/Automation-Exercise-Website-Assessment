@@ -70,14 +70,8 @@ AutomationAssessment.Tests/
 
 - **Account Creation**: Create accounts with valid/invalid data.
 
-<<<<<<< HEAD
-Each test includes **Allure annotations** for:
-
-- **Epic** (high-level module)
-- **Suite / SubSuite** (feature group)
-- **Story** (specific scenario)
-- # **Severity** (critical, normal, minor)
   Each test includes **Allure annotations** for:
+
 - **Epic** (high-level module)
 - **Suite / SubSuite** (feature group)
 - **Story** (specific scenario)
