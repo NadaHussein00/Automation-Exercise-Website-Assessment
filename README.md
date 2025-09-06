@@ -5,7 +5,7 @@
 This project contains **automated tests** for the [Automation Exercise](https://automationexercise.com) website.  
 It includes **Selenium UI tests** and **API tests**, covering functionality such as login, signup, and account creation.
 
-Test results are generated using **Allure Reports**, which include **test suites, sub-suites, severity levels, and stories** for better test reporting and traceability.
+Test results are generated using **Allure Reports**, which include **epics, test suites, sub-suites, severity levels, and stories** for better test reporting and traceability.
 
 ---
 
