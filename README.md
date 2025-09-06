@@ -70,7 +70,7 @@ AutomationAssessment.Tests/
 
 - **Account Creation**: Create accounts with valid/invalid data.
 
-  Each test includes **Allure annotations** for:
+### Each test includes **Allure annotations** for:
 
 - **Epic** (high-level module)
 - **Suite / SubSuite** (feature group)
