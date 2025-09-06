@@ -24,32 +24,30 @@ Test results are generated using **Allure Reports**, which include **epics, test
 
 ```text
 AutomationAssessment.Tests/
-│── Drivers/
-│ └── WebDriverSetup.cs
-│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── Drivers/
+│   └── WebDriverSetup.cs
 ├── Pages/
-│ ├── AuthPage.cs
-│ └── SignUpInfoPage.cs
-│
+│   ├── AuthPage.cs
+│   └── SignUpInfoPage.cs
 ├── Utils/
-│ ├── Selenium/
-│ │ └── CsvReader.cs
-│ ├── API/
-│ │ └── ApiSetup.cs
-│ └── SharedMethods.cs
-│
+│   ├── Selenium/
+│   │   └── CsvReader.cs
+│   ├── API/
+│   │   └── ApiSetup.cs
+│   └── SharedMethods.cs
 ├── Tests/
-│ ├── Selenium/
-│ │ ├── BaseTests.cs
-│ │ ├── HomePageTests.cs
-│ │ ├── LoginFormTests.cs
-│ │ └── SignUpFormTests.cs
-│ └── API/
-│ └── CreateAccountTests.cs
-│
+│   ├── Selenium/
+│   │   ├── BaseTests.cs
+│   │   ├── HomePageTests.cs
+│   │   ├── LoginFormTests.cs
+│   │   └── SignUpFormTests.cs
+│   └── API/
+│       └── CreateAccountTests.cs
 ├── TestData/
-│ └── invalidLoginData.csv
-│
+│   └── invalidLoginData.csv
 ├── Usings.cs
 ├── .gitignore
 └── README.md
