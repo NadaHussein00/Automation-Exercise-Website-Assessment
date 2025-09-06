@@ -30,6 +30,7 @@ jobs:
       - name: Install Allure CLI
         uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: "17"
       - run: npm install -g allure-commandline --save-dev
 
