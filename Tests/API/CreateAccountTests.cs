@@ -39,9 +39,11 @@ namespace AutomationAssessment.Tests.Tests.API
 
             var json = JsonSerializer.Deserialize<Dictionary<string, object>>(response.Content!);
 
-            Assert.Multiple(() => {Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK)); 
-            Assert.That(json!["responseCode"], Is.EqualTo(201));              
-            Assert.That(json!["message"].ToString(), Does.Contain("User created!"));
+            Assert.Multiple(() =>
+            {
+                Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created)); 
+                Assert.That(json!["responseCode"], Is.EqualTo(201));              
+                Assert.That(json!["message"].ToString(), Does.Contain("User created!"));
             });
 }
     }

@@ -19,7 +19,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
             string name = "TestUser";
             string email = SharedMethods.GetUniqueEmail("testuser@example.com");
-            var signUpInfoPage = authPage.SignUpWithBasicInfo(name, email);
+            authPage.SignUpWithBasicInfo(name, email);
 
             Assert.That(authPage.IsUserNavigatedToSignUpPage(), Is.True,"User isn't navigated to signup info page");
         }
@@ -83,7 +83,6 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
 
             signUpInfoPage.SelectTitle("Mr");
-            signUpInfoPage.FillNameField("TestUser");
             signUpInfoPage.FillPasswordField("Password12@");
             signUpInfoPage.SelectDateOfBirth("1", "January", "1990");
             signUpInfoPage.CheckNewsletter();

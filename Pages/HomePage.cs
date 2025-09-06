@@ -5,6 +5,13 @@ namespace AutomationAssessment.Tests.Pages
         private readonly IWebDriver _driver;
         private const string HomePageUrl = "https://automationexercise.com/";
 
+        private readonly By _logoImage = By.CssSelector("img[alt='Website for automation practice']");
+        private readonly By _homeBtn = By.CssSelector("#header ul li:first-child a");  
+        private readonly By _cartBtn = By.CssSelector("a[href='/view_cart']");
+        private readonly By _signupBtn = By.CssSelector("a[href='/login']");
+        private readonly By _contactUsBtn = By.CssSelector("a[href='/contact_us']");
+        private readonly By _womenCategoryBtn = By.CssSelector("a[href='#Women']");
+
         public HomePage(IWebDriver driver)
         {
             _driver = driver;
@@ -14,14 +21,6 @@ namespace AutomationAssessment.Tests.Pages
         {
             _driver.Navigate().GoToUrl(HomePageUrl);
         }
-
-
-        private readonly By _logoImage = By.CssSelector("img[alt='Website for automation practice']");
-        private readonly By _homeBtn = By.CssSelector("#header ul li:first-child a");  
-        private readonly By _cartBtn = By.CssSelector("a[href='/view_cart']");
-        private readonly By _signupBtn = By.CssSelector("a[href='/login']");
-        private readonly By _contactUsBtn = By.CssSelector("a[href='/contact_us']");
-        private readonly By _womenCategoryBtn = By.CssSelector("a[href='#Women']");
 
         public bool IsLogoDisplayed() => _driver.FindElement(_logoImage).Displayed;
         public bool IsHomeBtnDisplayed() => _driver.FindElement(_homeBtn).Displayed;

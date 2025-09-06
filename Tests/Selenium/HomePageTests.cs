@@ -94,20 +94,6 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
-        [AllureSeverity(SeverityLevel.normal)]
-        [AllureSubSuite("UI Tests")]
-        [AllureStory("Cart Button")]
-        public void Cart_Button_Text_Is_Displayed()
-        {
-            var homePage = new HomePage(Driver);
-
-            homePage.GoToHomePage();
-            Assert.That(homePage.CartText(), Is.EqualTo("Cart"), "Cart text isn't displayed");
-
-        }
-
-        [Test]
-        [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Cart Button")]
@@ -120,6 +106,19 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         }
 
+               [Test]
+        [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureSubSuite("UI Tests")]
+        [AllureStory("Cart Button")]
+        public void Cart_Button_Text_Is_Displayed()
+        {
+            var homePage = new HomePage(Driver);
+
+            homePage.GoToHomePage();
+            Assert.That(homePage.CartText(), Is.EqualTo("Cart"), "Cart text isn't displayed");
+
+        }
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]

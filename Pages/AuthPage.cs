@@ -1,5 +1,3 @@
-using AutomationAssessment.Tests.Utils.Selenium;
-
 namespace AutomationAssessment.Tests.Pages
 {
     public class AuthPage
@@ -7,7 +5,16 @@ namespace AutomationAssessment.Tests.Pages
         private readonly IWebDriver _driver;
         private readonly WebDriverWait _wait;
         private const string AuthPageUrl = "https://automationexercise.com/login";
+        private readonly By _nameSignUpField = By.CssSelector(".signup-form form input[placeholder='Name']");
+        private readonly By _emailSignUpField = By.CssSelector(".signup-form form input[placeholder='Email Address']");
+        private readonly By _signUpBtn = By.CssSelector(".signup-form form button[type='submit']");
 
+        private readonly By _emailLoginField = By.CssSelector("input[data-qa='login-email']");
+        private readonly By _passwordLoginField = By.CssSelector("input[data-qa='login-password']");
+        private readonly By _loginBtn = By.CssSelector("button[data-qa='login-button']");
+        private readonly By _logoutBtn = By.CssSelector("a[href='/logout']");
+        private readonly By _invalidLoginAttemptErrorMsg = By.CssSelector("form[action='/login'] p");
+        
         public AuthPage(IWebDriver driver)
         {
             _driver = driver;
@@ -18,11 +25,6 @@ namespace AutomationAssessment.Tests.Pages
         {
             _driver.Navigate().GoToUrl(AuthPageUrl);
         }
-
-        private readonly By _nameSignUpField = By.CssSelector(".signup-form form input[placeholder='Name']");
-        private readonly By _emailSignUpField = By.CssSelector(".signup-form form input[placeholder='Email Address']");
-        private readonly By _signUpBtn = By.CssSelector(".signup-form form button[type='submit']");
-        private readonly By _accountInfoTitle = By.CssSelector(".login-form h2 b");
 
         public void FillNameSignUpField(string name) => _driver.FindElement(_nameSignUpField).SendKeys(name);
 
@@ -49,14 +51,6 @@ namespace AutomationAssessment.Tests.Pages
                 return false;
             }
         }
-
-        public SignUpInfoPage ContinueToAccountInfoPage() => new SignUpInfoPage(_driver);
-
-        private readonly By _emailLoginField = By.CssSelector("input[data-qa='login-email']");
-        private readonly By _passwordLoginField = By.CssSelector("input[data-qa='login-password']");
-        private readonly By _loginBtn = By.CssSelector("button[data-qa='login-button']");
-        private readonly By _logoutBtn = By.CssSelector("a[href='/logout']");
-        private readonly By _invalidLoginAttemptErrorMsg = By.CssSelector("form[action='/login'] p");
         
         public void FillEmailLoginField(string email) => _driver.FindElement(_emailLoginField).SendKeys(email);
 
@@ -72,6 +66,7 @@ namespace AutomationAssessment.Tests.Pages
                 return false;
             }
         }
+
         public string LogoutBtnText() => _driver.FindElement(_logoutBtn).Text.Trim();
         public void ClickLogoutBtn() => _driver.FindElement(_logoutBtn).Click();
 
@@ -92,6 +87,8 @@ namespace AutomationAssessment.Tests.Pages
                 return string.Empty;
             }
         }
+
+        public SignUpInfoPage ContinueToAccountInfoPage() => new SignUpInfoPage(_driver);
 
     }
 }

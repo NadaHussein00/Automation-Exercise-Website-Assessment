@@ -2,12 +2,7 @@ namespace AutomationAssessment.Tests.Pages
 {
     public class SignUpInfoPage{
         private readonly IWebDriver _driver;
-
-        public SignUpInfoPage(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
+        
         private readonly By _mrTitleRadioBtn = By.CssSelector("#id_gender1");
         private readonly By _mrsTitleRadioBtn = By.CssSelector("#id_gender2");
         private readonly By _nameField = By.CssSelector("form #name");
@@ -30,6 +25,11 @@ namespace AutomationAssessment.Tests.Pages
         private readonly By _mobileNumberField = By.CssSelector("form #mobile_number");
         private readonly By _createAccountBtn = By.CssSelector("form button[type='submit']");
         private readonly By _accountCreatedMsg = By.CssSelector("h2[data-qa='account-created']");
+
+        public SignUpInfoPage(IWebDriver driver)
+        {
+            _driver = driver;
+        }
 
         public bool IsMrTitleDisplayed() => _driver.FindElement(_mrTitleRadioBtn).Displayed;
         public bool IsMrsTitleDisplayed() => _driver.FindElement(_mrsTitleRadioBtn).Displayed;
