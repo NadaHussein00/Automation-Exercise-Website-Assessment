@@ -1,6 +1,6 @@
-namespace AutomationAssessment.Tests.Utils.Selenium
+namespace AutomationAssessment.Tests.Utils
 {
-    public class SharedMethods{
+    public static class SharedMethods{
         public static string GetUniqueEmail(string baseEmail)
         {
             long timestamp = DateTime.Now.Ticks;

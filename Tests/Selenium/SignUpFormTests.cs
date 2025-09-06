@@ -1,4 +1,4 @@
-using AutomationAssessment.Tests.Utils.Selenium;
+using AutomationAssessment.Tests.Utils;
 using AutomationAssessment.Tests.Pages;
 
 namespace AutomationAssessment.Tests.Tests.Selenium

@@ -1,5 +1,5 @@
 using AutomationAssessment.Tests.Utils.API;
-using AutomationAssessment.Tests.Utils.Selenium;
+using AutomationAssessment.Tests.Utils;
 
 namespace AutomationAssessment.Tests.Tests.API
 {
