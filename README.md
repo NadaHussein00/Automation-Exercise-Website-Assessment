@@ -5,7 +5,7 @@
 This project contains **automated tests** for the [Automation Exercise](https://automationexercise.com) website.  
 It includes **Selenium UI tests** and **API tests**, covering functionality such as login, signup, and account creation.
 
-Test results are generated using **Allure Reports**, which include **test suites, sub-suites, severity levels, and stories** for better test reporting and traceability.
+Test results are generated using **Allure Reports**, which include **epics, test suites, sub-suites, severity levels, and stories** for better test reporting and traceability.
 
 ---
 
@@ -22,6 +22,7 @@ Test results are generated using **Allure Reports**, which include **test suites
 
 ## File Structure
 
+```text
 AutomationAssessment.Tests/
 │── Drivers/
 │ └── WebDriverSetup.cs
@@ -52,6 +53,7 @@ AutomationAssessment.Tests/
 ├── Usings.cs
 ├── .gitignore
 └── README.md
+```
 
 ---
 
@@ -68,12 +70,19 @@ AutomationAssessment.Tests/
 
 - **Account Creation**: Create accounts with valid/invalid data.
 
+<<<<<<< HEAD
 Each test includes **Allure annotations** for:
 
 - **Epic** (high-level module)
 - **Suite / SubSuite** (feature group)
 - **Story** (specific scenario)
+- # **Severity** (critical, normal, minor)
+  Each test includes **Allure annotations** for:
+- **Epic** (high-level module)
+- **Suite / SubSuite** (feature group)
+- **Story** (specific scenario)
 - **Severity** (critical, normal, minor)
+  > > > > > > > a96d95345180bb4c231c83ff490b54297993e0b6
 
 ---
 
@@ -83,6 +92,7 @@ Each test includes **Allure annotations** for:
 - Generates **Allure report** after test execution.
 - Reports are deployed to **GitHub Pages**.
 - Uses a **Windows runner** and sets up .NET 9, Selenium, and Allure CLI.
+- You can visit (https://nadahussein00.github.io/Automation-Exercise-Website-Assessment/) to see the Allure report after the workflow finishes.
 
 ---
 
