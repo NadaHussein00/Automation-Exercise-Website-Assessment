@@ -9,6 +9,13 @@ Test results are generated using **Allure Reports**, which include **epics, test
 
 ---
 
+## Development Environment
+
+- **IDE/Editor**: Visual Studio Code
+- **OS**: Windows 11
+
+---
+
 ## Tech Stack
 
 - **C# / .NET 9**
@@ -118,28 +125,29 @@ Before running tests locally, make sure you have:
 
 ### Restore dependencies
 
-dotnet restore
+`dotnet restore`
 
 ### Run all tests
 
-dotnet test
+`dotnet test`
 
 ### Generate Allure report
 
-allure generate bin\Debug\net9.0 allure-results -o allure-report
+`allure generate bin\Debug\net9.0 allure-results -o allure-report`
 
 ### Open Allure report
 
-allure open allure-report
+`allure open allure-report`
 
 ## Notes
 
 - **Selenium Tests** run on Chrome by default.
 
 - If someone wants to run only API tests or only Selenium tests or any other category, you can filter by **category**
-  dotnet test --filter "Category=Login"
-  dotnet test --filter "Category=API&Category=Valid"
-  dotnet test --filter "Category=UI|Category=Valid"
+
+  - `dotnet test --filter "Category=Login"`
+  - `dotnet test --filter "Category=API&Category=Valid"`
+  - `dotnet test --filter "Category=UI|Category=Valid"`
 
 - Allure Reports **categorize** tests by severity, epic, suite, subsuite, and story, providing a clear overview of test results.
 
