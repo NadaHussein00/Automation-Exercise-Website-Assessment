@@ -82,7 +82,6 @@ Each test includes **Allure annotations** for:
 - **Suite / SubSuite** (feature group)
 - **Story** (specific scenario)
 - **Severity** (critical, normal, minor)
-  > > > > > > > a96d95345180bb4c231c83ff490b54297993e0b6
 
 ---
 
