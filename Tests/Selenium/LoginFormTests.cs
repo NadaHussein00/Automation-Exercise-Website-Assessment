@@ -9,6 +9,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     {
         [Test]
         [Category("Selenium"), Category("Login"), Category("Navigation"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("Valid Login Tests")]
         [AllureStory("Login With Valid Credentials")]
         public void Login_With_Valid_Credentils()
@@ -35,6 +36,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
         [Test]
         [Category("Selenium"), Category("Login"), Category("Error Handeling"), Category("Invalid")]
         [TestCaseSource(typeof(CsvReader), nameof(CsvReader.GetLoginData))]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("Invalid Login Tests")]
         [AllureStory("Login With Invalid Credentials")]
         public void Login_With_Invalid_Credentials(string email, string password)

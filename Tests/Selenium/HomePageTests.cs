@@ -8,6 +8,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     {
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.minor)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Home Page Title")]
         public void Homepage_Title_Is_Displayed()
@@ -23,6 +24,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Website Logo")]
         public void Website_Logo_Is_Displayed()
@@ -36,6 +38,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Home Button")]
         public void Home_Button_Is_Displayed()
@@ -49,6 +52,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Home Button")]
         public void Home_Button_Is_Clickable()
@@ -62,6 +66,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Home Button")]
         public void Home_Button_Text_Is_Displayed()
@@ -75,6 +80,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Cart Button")]
         public void Cart_Button_Is_Displayed()
@@ -88,6 +94,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Cart Button")]
         public void Cart_Button_Text_Is_Displayed()
@@ -101,6 +108,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Cart Button")]
         public void Cart_Button_Is_Clickable()
@@ -115,6 +123,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Signup Button")]
         public void Signup_Button_Is_Displayed()
@@ -128,6 +137,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Signup Button")]
         public void Signup_Button_Is_Clickable()
@@ -141,6 +151,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Signup Button")]
         public void Signup_Button_Text_Is_Displayed()
@@ -155,6 +166,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Contact Us Button")]
         public void Contact_Us_Button_Is_Displayed()
@@ -168,6 +180,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Contact Us Button")]
         public void Contact_Us_Button_Is_Clickable()
@@ -181,6 +194,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Contact Us Button")]
         public void Contact_Us_Button_Text_Is_Displayed()
@@ -194,6 +208,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Women Category Button")]
         public void Women_Category_Button_Is_Displayed()
@@ -207,6 +222,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Women Category Button")]
         public void Women_Category_Button_Is_Clickable()
@@ -220,6 +236,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
 
         [Test]
         [Category("Selenium"), Category("HomePgae"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Women Category Button")]
         public void Women_Category_Button_Text_Is_Displayed()

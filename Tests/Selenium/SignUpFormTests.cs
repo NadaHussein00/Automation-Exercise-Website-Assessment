@@ -9,6 +9,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
     {
         [Test]
         [Category("Selenium"), Category("SignUp"), Category("Navigation"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("Navigation Tests")]
         [AllureStory("Correct Navigation to Signup Page")]
         public void Navigation_To_SignUp_Page()
@@ -23,9 +24,9 @@ namespace AutomationAssessment.Tests.Tests.Selenium
             Assert.That(authPage.IsUserNavigatedToSignUpPage(), Is.True,"User isn't navigated to signup info page");
         }
 
-
         [Test]
         [Category("Selenium"), Category("SignUp"), Category("UI"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.normal)]
         [AllureSubSuite("UI Tests")]
         [AllureStory("Elements of Signup Page are Displayed")]
         public void SignUp_Form_Elements_Displayed()
@@ -66,6 +67,7 @@ namespace AutomationAssessment.Tests.Tests.Selenium
           });
           }
 
+          [AllureSeverity(SeverityLevel.critical)]
           [Test]
           [Category("Selenium"), Category("SignUp"), Category("AccoutCreation"), Category("Valid")]
           [AllureSubSuite("Valid Account Creation Tests")]

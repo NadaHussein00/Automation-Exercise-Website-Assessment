@@ -9,6 +9,7 @@ namespace AutomationAssessment.Tests.Tests.API
     {
         [Test]
         [Category("API"), Category("CreateAccount"), Category("Valid")]
+        [AllureSeverity(SeverityLevel.critical)]
         [AllureSubSuite("Valid Account Creation Tests")]
         [AllureStory("Account Creation With Valid Information")]
         public async Task CreateAccount_WithValidData_ShouldReturn201()
