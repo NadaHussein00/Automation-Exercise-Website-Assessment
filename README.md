@@ -136,6 +136,11 @@ allure open allure-report
 
 - **Selenium Tests** run on Chrome by default.
 
+- If someone wants to run only API tests or only Selenium tests or any other category, you can filter by **category**
+  dotnet test --filter "Category=Login"
+  dotnet test --filter "Category=API&Category=Valid"
+  dotnet test --filter "Category=UI|Category=Valid"
+
 - Allure Reports **categorize** tests by severity, epic, suite, subsuite, and story, providing a clear overview of test results.
 
 - Invalid login scenarios are read from **TestData/invalidLoginData.csv**.
