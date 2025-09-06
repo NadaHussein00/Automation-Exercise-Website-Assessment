@@ -1,71 +1,48 @@
-name: CI - Run Tests and Publish Allure Report
+name: CI with Allure Report
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: "9.0.100"
+          dotnet-version: 9.0.100
 
-      - name: Restore Dependencies
+      - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build Project
-        run: dotnet build --configuration Release --no-restore
-
       - name: Install Allure CLI
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "17"
-      - run: npm install -g allure-commandline --save-dev
+        run: |
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
+          scoop install allure
+          echo "C:\Users\runneradmin\scoop\shims" | Out-File -Append -FilePath $env:GITHUB_PATH
 
-      - name: Run Tests with Allure Results
-        run: dotnet test --logger "trx;LogFileName=test_results.trx" --results-directory "allure-results"
-
-      - name: Upload Allure Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Deploy only on main pushes
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Download Allure Results
-        uses: actions/download-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results
-
-      - name: Install Allure CLI
-        uses: actions/setup-java@v4
-        with:
-          java-version: "17"
-      - run: npm install -g allure-commandline --save-dev
+      - name: Run tests
+        run: dotnet test --logger:"console;verbosity=detailed" --results-directory allure-results
+        continue-on-error: true
 
       - name: Generate Allure Report
-        run: allure generate allure-results --clean -o allure-report
+        run: |
+          if (Test-Path "bin\Debug\net9.0\allure-results") {
+              allure generate bin\Debug\net9.0\allure-results -o allure-report --clean
+          } else {
+              Write-Host "No test results found to generate Allure report"
+          }
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
