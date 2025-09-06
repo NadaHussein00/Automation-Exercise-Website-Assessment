@@ -97,20 +97,20 @@ Before running tests locally, make sure you have:
 3. **Google Chorme** (latest stable)
 4. **ChromeDriver** matching your Chrome version
 5. **NuGet Dependencies**
-   Allure.Net.Commons 2.12.1
-   Allure.NUnit 2.12.1
-   coverlet.collector 6.0.2
-   DotNetSeleniumExtras.WaitHelpers 3.11.0
-   ExcelDataReader 3.7.0
-   ExcelDataReader.DataSet 3.7.0
-   Microsoft.NET.Test.Sdk 17.11.1
-   Newtonsoft.Json 13.0.3
-   NUnit 4.2.2
-   NUnit.Analyzers 4.3.0
-   NUnit3TestAdapter 4.6.0
-   RestSharp 112.1.0
-   Selenium.Support 4.35.0
-   Selenium.WebDriver 4.35.0
+   - Allure.Net.Commons 2.12.1
+   - Allure.NUnit 2.12.1
+   - coverlet.collector 6.0.2
+   - DotNetSeleniumExtras.WaitHelpers 3.11.0
+   - ExcelDataReader 3.7.0
+   - ExcelDataReader.DataSet 3.7.0
+   - Microsoft.NET.Test.Sdk 17.11.1
+   - Newtonsoft.Json 13.0.3
+   - NUnit 4.2.2
+   - NUnit.Analyzers 4.3.0
+   - NUnit3TestAdapter 4.6.0
+   - RestSharp 112.1.0
+   - Selenium.Support 4.35.0
+   - Selenium.WebDriver 4.35.0
 6. **Allure CLI** installed
 
 ## Test Execution
